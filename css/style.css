@@ -37,7 +37,8 @@
     --logo-container-color: rgba(0,0,0, 0.6);
     --hero-font-color: #fff;
     --form-font-color: #fff;
-    --create-account-color: #fff;
+    --create-account-btn-color: #596D48;
+    --create-account-text-color: #fff;
     --log-in-color: #fff;
     --form-panel-color: #DBE9F4;
     --form-color: #F5F5F5;
@@ -142,6 +143,39 @@ body {
   font-size: .7rem;
   font-weight: 600;
   color: var(--form-label-color);
+}
+input[type="submit"] {
+  font-family: work-sans;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: .7rem 1.5rem .7rem 1.5rem;
+  color: var(--create-account-text-color);
+  background-color: var(--create-account-btn-color);
+  border-radius: 7px;
+  border: none;
+  box-shadow: 1px 2px 19px 0px rgba(112,112,112,0.75);
+  -webkit-box-shadow: 1px 2px 19px 0px rgba(112,112,112,0.75);
+  -moz-box-shadow: 1px 2px 19px 0px rgba(112,112,112,0.75);
+  cursor: pointer;
+  margin-top: 2rem;
+  margin-left: 3rem;
+}
+.login-container {
+  margin-top: 1.5rem;
+  margin-left: 3rem;
+  display: flex;
+  gap: .5rem;
+  font-family: work-sans;
+}
+.login-container button {
+  background: none;
+	color: var(--create-account-btn-color);
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+  font-weight: 600;
 }
 
 
