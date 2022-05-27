@@ -37,12 +37,11 @@ pswdConfirm.addEventListener("input", function (event) {
 
 form.addEventListener("submit", function (event) {
     // If the passwords match and are filled, submit
-    if (!pswdConfirm.validity.valid) {
+    if (pswdConfirm.value !== pswd.value) {
         // If not, show an error message
         showError();
         // Prevent the form from being submitted by canceling the event
         event.preventDefault();
-
     }
 })
 
