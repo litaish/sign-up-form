@@ -38,6 +38,7 @@
     --hero-font-color: #fff;
     --form-font-color: #fff;
     --create-account-btn-color: #596D48;
+    --create-account-btn-hover-color: rgba(59, 74, 47, 1);
     --create-account-text-color: #fff;
     --log-in-color: #fff;
     --form-panel-color: #DBE9F4;
@@ -45,6 +46,8 @@
     --right-panel-heading-color: #202A44;
     --form-input-border-color: #E5E7EB;
     --form-label-color: #35586C;
+    --focus-color: rgba(81, 203, 238, 1);
+    --invalid-color: red;
 }
 html {
     -webkit-box-sizing: border-box;
@@ -118,6 +121,12 @@ body {
 .form-container h4 {
   font-size: 1.4rem;
   margin-top: 0;
+  margin-bottom: .5rem;
+}
+.form-container p {
+  font-size: .9rem;
+  font-family: work-sans;
+  margin-bottom: 2rem;
 }
 .form-row {
   display: flex;
@@ -128,7 +137,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-.form-field input {
+.form-field input:required {
   margin-top: .2rem;
   width: 15rem;
   background-color: #FFFFFF;
@@ -137,6 +146,20 @@ body {
   padding: 7px;
   font-size: 14px;
   border-color: var(--form-input-border-color);
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+}
+.form-field input:focus:valid {
+  box-shadow: 0 0 5px var(--focus-color);
+  border: 1px solid var(--focus-color);
+  outline: none;
+}
+.form-field input:focus:invalid {
+  box-shadow: 0 0 5px var(--invalid-color);
+  border: 1px solid var(--invalid-color);
+  outline: none;
 }
 .form-field label {
   text-transform: uppercase;
@@ -159,6 +182,10 @@ input[type="submit"] {
   cursor: pointer;
   margin-top: 2rem;
   margin-left: 3rem;
+  transition: 0.4s;
+}
+input[type="submit"]:hover {
+  background-color: var(--create-account-btn-hover-color);
 }
 .login-container {
   margin-top: 1.5rem;
