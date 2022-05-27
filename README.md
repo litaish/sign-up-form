@@ -13,6 +13,4 @@ message is made accessible to screen readers.
 Error message gets displayed in `span` tag accordingly. If an error message
 is present, the `span` tag has `.active` class added, which makes the `span` visible.
 
-To be fixed:
--Fix form submit function, so it can only
-submit the form once the passwords are matched
+Basic responsivity has been implemented.
