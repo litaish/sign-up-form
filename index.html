@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
     <title>Sign up!</title>
 </head>
 <body>
@@ -71,12 +72,13 @@
                         <label for="password_confirm">
                             Confirm Password<abbr title="required" aria-label="required">*</abbr>
                         </label>
-                        <input id="password_confirm" type="password" name="password_confirm" minlength="10" required>
+                        <input id="password_confirm" type="password" name="password_confirm" required novalidate>
+                        <span class="error"></span>
                     </div>
                 </div>
             </form>
         </div>
-        <input type="submit" value="Create Account" form="sign_up_form">
+        <input id="submit" type="submit" value="Create Account" form="sign_up_form">
         <div class="login-container">
             <p>Already have an account?</p>
             <button type="button">Log In</button>
