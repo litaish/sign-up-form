@@ -39,6 +39,9 @@
     --form-font-color: #fff;
     --create-account-color: #fff;
     --log-in-color: #fff;
+    --form-panel-color: #DBE9F4;
+    --form-color: #F5F5F5;
+    --right-panel-heading-color: #202A44;
 }
 html {
     -webkit-box-sizing: border-box;
@@ -59,7 +62,7 @@ body {
 .left-panel {
   background: url("../img/halie-west-25xggax4bSA-unsplash.jpg");
   background-size: cover;
-  width: 550px;
+  flex-basis: 700px;
   display: flex;
   flex-direction: column;
 }
@@ -93,6 +96,28 @@ body {
 .description-container {
   font-family: work-sans;
   font-size: 1.5rem;
+}
+.right-panel {
+  background-color: var(--form-panel-color);
+}
+.description-container {
+  padding: 8rem 3rem 1rem 3rem;
+}
+.description-container h4 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  color: var(--right-panel-heading-color);
+}
+.form-container {
+  background-color: var(--form-color);
+  box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.1);
+}
+.form-row {
+  display: flex;
+  gap: 2rem;
+}
+.form-field {
+  display: flex;
+  flex-direction: column;
 }
 
 
